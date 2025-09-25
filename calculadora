@@ -1,0 +1,25 @@
+fun main() {
+    println("=== Calculadora en Kotlin con valores de ejemplo ===")
+    val valor1 = 11.0
+    val valor2 = 4.0
+    val operacion = '*'   
+    println("Operación: $valor1 $operacion $valor2")
+    val resultado = calcular(valor1, valor2, operacion)
+    if (resultado == null) {
+        println("Error: No se pudo realizar la operación.")
+    } else {
+        println("Resultado: $resultado")
+    }
+}
+fun calcular(a: Double, b: Double, operacion: Char): Double? {
+    return when (operacion) {
+        '+' -> a + b
+        '-' -> a - b
+        '*' -> a * b
+        '/' -> if (b != 0.0) a / b else {
+            println("Error: No se puede dividir entre 0.")
+            null
+        }
+        else -> null
+    }
+}
