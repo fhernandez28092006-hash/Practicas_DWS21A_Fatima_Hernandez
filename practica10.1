@@ -1,0 +1,10 @@
+fun main() {
+    val miListaMutableVacia: MutableList<String> = mutableListOf()
+    for (i in 1..100) {
+        if (i % 2 == 0) {
+            miListaMutableVacia.add(i.toString())
+        }
+    }
+    println("Tamaño de la lista: ${miListaMutableVacia.size}")
+    println("Elementos de la lista: $miListaMutableVacia")
+}
