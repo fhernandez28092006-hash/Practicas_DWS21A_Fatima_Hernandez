@@ -1,0 +1,14 @@
+fun main() {
+    val nombres = arrayOf("Ana", "Luis", "María", "Carlos", "Sofía")
+    val notas = doubleArrayOf(8.0, 9.5, 7.0, 8.5, 10.0)
+    var suma = 0.0
+    for (nota in notas) {
+        suma += nota
+    }
+    val promedio = suma / notas.size
+    println("Listado de estudiantes y sus notas:")
+    for (i in nombres.indices) {
+        println("${nombres[i]}  ${notas[i]}")
+    }
+    println("\nEl promedio de las notas es: $promedio")
+}
